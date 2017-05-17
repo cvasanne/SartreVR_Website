@@ -1,1 +1,1 @@
-Webseite zu findne unter: www.congress.lu/sartre
+Webseite zu finden unter: www.congress.lu/sartre
