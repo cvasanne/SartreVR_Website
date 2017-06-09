@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SartreVR</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+	</head>
+  <body>
+  
+  
+    <a-scene>
+	
+	<a-assets> 
+	 <a-asset-item id="ines_mtl" src="ines.mtl"></a-asset-item>		
+	 <a-asset-item id="ines_obj" src="ines.obj"></a-asset-item>	
+	 
+	 <a-asset-item id="estelle_mtl" src="estelle.mtl"></a-asset-item>		
+	 <a-asset-item id="estelle_obj" src="estelle.obj"></a-asset-item>	
+	   <a-mixin
+          id="marker"
+          geometry="primitive: plane; width: 0.02; height: 0.02"
+          material="color: red"
+></a-mixin>
+	</a-assets>	
+	
+	
+	  <a-entity position="0 1.6 4">
+	<a-entity camera look-controls wasd-controls>
+      <a-entity position="0 0 -0.5"
+                geometry="primitive: ring; radiusOuter: 0.0080;
+                          radiusInner: 0.0040;"
+                material="color: cyan; shader: flat"
+                cursor="maxDistance: 30; fuse: false">      
+      </a-entity>
+    </a-entity>
+  </a-entity>
+	a
+	
+	<a-plane rotation="-90 0 0" width="30" height="30" color="grey"></a-plane>		
+	<a-sky src="skybox.jpg"></a-sky>
+	<a-entity obj-model="mtl: #ines_mtl;obj: #ines_obj" rotation="-90 0 0" scale="0.002 0.002 0.002" position="-1 1.2 -2">
+		<a-animation begin="click" attribute="rotation" to="-90 360 0"
+                   easing="linear" dur="2000"></a-animation>	
+	</a-entity>
+	
+	<a-entity position="-1 1 -4" text="anchor: left; width: 1.5; color: white; value: TEST TEXT">				
+	</a-entity>			  
+	
+	
+	<a-entity obj-model="mtl: #estelle_mtl;obj: #estelle_obj" rotation="-90 0 0" scale="0.002 0.002 0.002" position="1 1.2 -2">
+	<a-animation begin="click" attribute="rotation" to="-90 360 0"
+	easing="linear" dur="2000"></a-animation>	
+	</a-entity>	
+	
+	 
+     
+	
+	
+	
+	
+	</a-scene>
+   
+   
+   
+  </body>
+</html>
