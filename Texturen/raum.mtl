@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 23.05.2017 18:08:33
+# File Created: 02.07.2017 13:31:34
 
 newmtl Material__2
 	Ns 10.0000
@@ -72,6 +72,7 @@ newmtl 13___Default
 	map_Ka Seamless wall white paint stucco plaster texture 01.jpg
 	map_Kd Seamless wall white paint stucco plaster texture 01.jpg
 	
+
 newmtl 07___Default
 	Ns 10.0000
 	Ni 1.5000
@@ -85,7 +86,7 @@ newmtl 07___Default
 	Ke 0.0000 0.0000 0.0000
 	map_Ka floor.jpg
 	map_Kd floor.jpg
-
+	
 
 newmtl 02___Default
 	Ns 10.0000
@@ -100,8 +101,7 @@ newmtl 02___Default
 	Ke 0.0000 0.0000 0.0000
 	map_Ka -o 0.0700 0.0000 0.0000 carpet.jpg
 	map_Kd -o 0.0700 0.0000 0.0000 carpet.jpg
-	map_bump -bm 0.3000 carpet_bump.jpg
-	bump -bm 0.3000 carpet_bump.jpg
+
 
 newmtl 01___Default
 	Ns 10.0000
@@ -116,23 +116,7 @@ newmtl 01___Default
 	Ke 0.0000 0.0000 0.0000
 	map_Ka -o 0.0600 0.0000 0.0000 carpet.jpg
 	map_Kd -o 0.0600 0.0000 0.0000 carpet.jpg
-	map_bump -bm 0.3000 carpet_bump.jpg
-	bump -bm 0.3000 carpet_bump.jpg
-
-newmtl 19___Default
-	Ns 10.0000
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 0.0000 0.0000 0.0000
-	Kd 0.5882 0.5882 0.5882
-	Ks 0.0000 0.0000 0.0000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka wood132.jpg
-	map_Kd wood132.jpg
-
+	
 
 newmtl 15___Default
 	Ns 10.0000
@@ -147,6 +131,20 @@ newmtl 15___Default
 	Ke 0.0000 0.0000 0.0000
 	map_Ka wood_irt san.jpg
 	map_Kd wood_irt san.jpg
+
+newmtl 19___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka wood132.jpg
+	map_Kd wood132.jpg
 	
 
 newmtl 20___Default
@@ -200,7 +198,7 @@ newmtl _Black_55
 	Ks 0.0039 0.0039 0.0039
 	Ke 0.0000 0.0000 0.0000
 
-newmtl 21___Default
+newmtl 05___Default
 	Ns 10.0000
 	Ni 1.5000
 	d 1.0000
@@ -211,10 +209,8 @@ newmtl 21___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka AS2_leather_03b.jpg
-	map_Kd AS2_leather_03b.jpg
-	map_bump -bm 0.3000 AS2_leather_03_bump.jpg
-	bump -bm 0.3000 AS2_leather_03_bump.jpg
+	map_Ka AS2RED.jpg
+	map_Kd AS2RED.jpg
 
 newmtl 22___Default
 	Ns 10.0000
@@ -229,6 +225,36 @@ newmtl 22___Default
 	Ke 0.0000 0.0000 0.0000
 	map_Ka 178A.JPG
 	map_Kd 178A.JPG
+
+newmtl 21___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka AS2_leather_03b.jpg
+	map_Kd AS2_leather_03b.jpg
+	map_bump -bm 0.1000 AS2_leather_03_bump.jpg
+	bump -bm 0.1000 AS2_leather_03_bump.jpg
+
+newmtl 04___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka AS2green.jpg
+	map_Kd AS2green.jpg
 
 newmtl 23___Default
 	Ns 10.0000
@@ -267,3 +293,73 @@ newmtl CXCBJXC
 	Kd 1.0000 1.0000 1.0000
 	Ks 0.6480 0.6480 0.6480
 	Ke 0.4300 0.4300 0.4300
+
+newmtl 24___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka firewood.jpg
+	map_Kd firewood.jpg
+
+newmtl 16___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka marble.jpg
+	map_Kd marble.jpg
+
+newmtl 17___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka marble2.jpg
+	map_Kd marble2.jpg
+
+newmtl 18___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka smoke.jpg
+	map_Kd smoke.jpg
+
+newmtl 10___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka AS2_leather_03b.jpg
+	map_Kd AS2_leather_03b.jpg
