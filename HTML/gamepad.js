@@ -101,7 +101,7 @@
 
 	    // Constants
 	    easing:            { default: 20 },
-	    acceleration:      { default: 300 },
+	    acceleration:      { default: 1000 },
 	    sensitivity:       { default: 0.04 },
 
 	    // Control axes
