@@ -4,6 +4,9 @@
     <title>SartreVR</title>
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>		
 	<script src="gamepad.js"></script>
+	<script src="kellnerscript.js"></script>
+	<script src="szenearray.js"></script>
+	<script src="szenescript.js"></script>
 	<script src="aframe-extras.js"></script>
 	<script src="https://unpkg.com/aframe-text-geometry-component/dist/aframe-text-geometry-component.min.js"></script> 
 	
@@ -100,7 +103,7 @@ AFRAME.registerComponent('animation-control', {
   </head>
   <body>  
   
-    <a-scene>
+    <a-scene sound="src: url(Soundfiles/background.mp3); autoplay: true; volume: 5; loop: true">
 	<a-assets>  
 	
 	<!-- RAUM -->
@@ -159,36 +162,35 @@ AFRAME.registerComponent('animation-control', {
 	<!-- BELEUCHTUNG ENDE -->	
 	<!-- SCHLAGWÖRTER -->
 		
-	<a-entity class="clickable" id="Rational" class="clickable" animation-control="clip: talk; crossFadeDuration: .3" position="-45 35 -22" rotation="0 90 0" scale="10 10 10" text-geometry="value: Rational" visible="true" sound="src: url(audio/monologe/ines/monolog_ines_rational.wav); on: click; volume: 15"></a-entity>  <!-- Ines -->
+	<a-entity class="clickable" id="Rational" material="color: darkred" position="-45 35 -22" rotation="0 90 0" scale="0 0 0" text-geometry="value: Rational" visible="false" sound="src: url(Soundfiles/monologe/ines/monolog_ines_rational.wav); on: click; volume: 15"></a-entity>  <!-- Ines -->
 	
-	<a-entity class="clickable" id="Vertrauen" class="clickable" animation-control="clip: estelle_sitting_disbelief; crossFadeDuration: .3" position="60 25 -39" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Vertrauen" visible="true" sound="src: url(audio/monologe/estelle/monolog_estelle_vertrauen.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
+	<a-entity class="clickable" id="Vertrauen" material="color: darkred" position="60 25 -39" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Vertrauen" visible="false" sound="src: url(Soundfiles/monologe/estelle/monolog_estelle_vertrauen.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
 	
-	<a-entity class="clickable" id="Angst"  position="60 35 53" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Angst" visible="true" sound="src: url(audio/monologe/garcin/monolog_garcin_angst.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
+	<a-entity class="clickable" id="Angst" material="color: darkred" position="60 35 53" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Angst" visible="false" sound="src: url(Soundfiles/monologe/garcin/monolog_garcin_angst.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
 	
-	<a-entity class="clickable" id="Deserteur" position="60 25 40" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Deserteur" visible="true" sound="src: url(audio/monologe/garcin/monolog_garcin_deserteur.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
+	<a-entity class="clickable" id="Deserteur" material="color: darkred" position="60 25 40" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Deserteur" visible="false" sound="src: url(Soundfiles/monologe/garcin/monolog_garcin_deserteur.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
 	
-	<a-entity class="clickable" id="Heuchler" position="60 40 40" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Heuchler" visible="true" sound="src: url(audio/monologe/garcin/monolog_garcin_heuchler.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
+	<a-entity class="clickable" id="Heuchler" material="color: darkred" position="60 40 40" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Heuchler" visible="false" sound="src: url(Soundfiles/monologe/garcin/monolog_garcin_heuchler.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
 	
-	<a-entity class="clickable" id="Barbar" position="60 20 57" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Barbar" visible="true" sound="src: url(audio/monologe/garcin/monolog_garcin_barbar.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
+	<a-entity class="clickable" id="Barbar" material="color: darkred" position="60 20 57" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Barbar" visible="false" sound="src: url(Soundfiles/monologe/garcin/monolog_garcin_barbar.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
 	
-	<a-entity class="clickable" id="Schuft" position="60 20 25" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Schuft" visible="true" sound="src: url(audio/monologe/garcin/monolog_garcin_schuft.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
+	<a-entity class="clickable" id="Schuft" material="color: darkred" position="60 20 25" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Schuft" visible="false" sound="src: url(Soundfiles/monologe/garcin/monolog_garcin_schuft.wav); on: click; volume: 15"></a-entity> <!-- Garcin -->
 	
-	<a-entity class="clickable" id="Verdammte" class="clickable" animation-control="clip: defeat; crossFadeDuration:.3" position="-41 35 -57" rotation="0 40 0" scale="10 10 10" text-geometry="value: Verdammte" visible="true" sound="src: url(audio/monologe/ines/monolog_ines_verdammte.wav); on: click; volume: 15"></a-entity> <!-- Ines -->
+	<a-entity class="clickable" id="Verdammte" material="color: darkred" position="-41 35 -57" rotation="0 40 0" scale="0 0 0" text-geometry="value: Verdammte" visible="false" sound="src: url(Soundfiles/monologe/ines/monolog_ines_verdammte.wav); on: click; volume: 15"></a-entity> <!-- Ines -->	
 	
-	<a-entity class="clickable" id="Feigling" position="60 33 29" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Feigling" visible="true" sound="src: url(audio/monologe/garcin/monolog_garcin_feigling.wav); on: click; volume: 15"></a-entity>  <!-- Garcin -->
+	<a-entity class="clickable" id="Feigling" material="color: darkred" position="60 33 29" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Feigling" visible="false" sound="src: url(Soundfiles/monologe/garcin/monolog_garcin_feigling.wav); on: click; volume: 15"></a-entity>  <!-- Garcin -->
 	
-	<a-entity class="clickable" id="Manipulativ" class="clickable" animation-control="clip: turn; crossFadeDuration:.3" position="-36 24 -81" rotation="0 0 0" scale="10 10 10" text-geometry="value: Manipulativ" visible="true" sound="src: url(audio/monologe/ines/monolog_ines_manipulativ.wav); on: click; volume: 15"></a-entity> <!-- Ines -->
+	<a-entity class="clickable" id="Manipulativ" material="color: darkred" position="-36 24 -81" rotation="0 0 0" scale="0 0 0" text-geometry="value: Manipulativ" visible="false" sound="src: url(Soundfiles/monologe/ines/monolog_ines_manipulativ.wav); on: click; volume: 15"></a-entity> <!-- Ines -->
 	
-	<a-entity class="clickable" id="Trotzig" class="clickable" animation-control="clip: estelle_femal_walk; crossFadeDuration: .3" position="60 35 -60" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Trotzig" visible="true" sound="src: url(audio/monologe/estelle/monolog_estelle_trotzig.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
+	<a-entity class="clickable" id="Trotzig" material="color: darkred" position="60 35 -60" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Trotzig" visible="false" sound="src: url(Soundfiles/monologe/estelle/monolog_estelle_trotzig.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
 	
-	<a-entity class="clickable" id="Eitel" class="clickable" animation-control="clip: estelle_femal_walk; crossFadeDuration: .3" position="60 40 -35" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Eitel" visible="true" sound="src: url(audio/monologe/estelle/monolog_estelle_eitel.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
+	<a-entity class="clickable" id="Eitel" material="color: darkred" position="60 40 -35" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Eitel" visible="false" sound="src: url(Soundfiles/monologe/estelle/monolog_estelle_eitel.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
 	
-	<a-entity class="clickable" id="Folterknecht" class="clickable" animation-control="clip: yell; crossFadeDuration:.3" position="-46 27 -4" rotation="0 90 0" scale="10 10 10" text-geometry="value: Folterknecht" visible="true" sound="src: url(audio/monologe/ines/monolog_ines_folterknecht.wav); on: click; volume: 15"></a-entity> <!-- Ines -->
+	<a-entity class="clickable" id="Folterknecht" material="color: darkred" position="-46 27 -4" rotation="0 90 0" scale="0 0 0" text-geometry="value: Folterknecht" visible="false" sound="src: url(Soundfiles/monologe/ines/monolog_ines_folterknecht.wav); on: click; volume: 15"></a-entity> <!-- Ines -->
 	
-	<a-entity class="clickable" id="Instabil" class="clickable" animation-control="clip: estelle_crying; crossFadeDuration: .3" position="60 21 -69" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Instabil" visible="true" sound="src: url(audio/monologe/estelle/monolog_estelle_instabil.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
+	<a-entity class="clickable" id="Instabil" material="color: darkred" position="60 21 -69" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Instabil" visible="false" sound="src: url(Soundfiles/monologe/estelle/monolog_estelle_instabil.wav); on: click; volume: 15"></a-entity> <!-- Estelle -->
 	
-	<a-entity class="clickable" id="Arrogant" class="clickable" animation-control="clip: estelle_annoyed_head; crossFadeDuration: .3" position="60 32 -26" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Arrogant" visible="true" sound="src: url(audio/monologe/estelle/monolog_estelle_arrogant.wav); on: click; volume: 15"></a-entity>  <!-- Estelle -->
-					
+	<a-entity class="clickable" id="Arrogant" material="color: darkred" position="60 32 -26" rotation="0 -90 0" scale="0 0 0" text-geometry="value: Arrogant" visible="false" sound="src: url(Soundfiles/monolog/estelle/monolog_estelle_arrogant.wav); on: click; volume: 15"></a-entity>  <!-- Estelle -->				
 	<!-- SCHLAGWÖRTER ENDE -->	
 	
 	<!-- FIGUREN -->
@@ -200,6 +202,7 @@ AFRAME.registerComponent('animation-control', {
 				rotation="5 -56.2 5.4"
 				json-model="src: url(Figuren_JSON/estelle_ani.json);"
 				animation-mixer="clip: estelle_sitting"
+		  		sound="src: url(Soundfiles/Szene/001garcin.mp3); volume: 10;"
 				>			
 	</a-entity>	
 	
@@ -210,6 +213,7 @@ AFRAME.registerComponent('animation-control', {
 				rotation="0 60 0"
 				json-model="src: url(Figuren_JSON/Inesanimated.json);"
 				animation-mixer="clip: think"
+		  		sound="src: url(Soundfiles/Szene/001garcin.mp3); volume: 10;"
 				>			
 	</a-entity>	
 	
@@ -219,7 +223,8 @@ AFRAME.registerComponent('animation-control', {
 				scale="0.45 0.45 0.45"
 				rotation="0 90 0"
 				json-model="src: url(Figuren_JSON/kellner.json);"
-				animation-mixer="clip: kellneridle"									
+				animation-mixer="clip: kellneridle"
+		  		sound="src: url(Soundfiles/Kellner/001kellner.mp3); volume: 10"
 				>
   <a-animation id="walkforward class=clickable"			
 			   attribute="position"		
@@ -233,6 +238,16 @@ AFRAME.registerComponent('animation-control', {
 	
 	
 	<!-- FIGUREN ENDE -->
+	    
+	<!-- SOUND -->
+	    
+	<script>
+		soundStart();
+		setTimeout(function(){
+			szeneStart(1); }, 80000);
+	</script>
+	    
+	<!-- SOUND ENDE -->
 	
 	<a-entity class="clickable" id="Start" animation-control="clip: kellnerwalk; duration:1; loop:repeat; repetitions:35" position="-300 25 38" rotation="0 -90 0" scale="10 10 10" text-geometry="value: Start" visible="true" emit-on-click="target: #walkforward; kellner">
 		 
